@@ -77,7 +77,11 @@ function pane(node, desc, dropitem, shade)
 	local full_blocks = {
 		{-0.5, -0.5, -0.06, 0.5, 0.5, 0.06},
 		{-0.06, -0.5, -0.5, 0.06, 0.5, 0.5}
-	}
+  }
+  
+  if dropitem == "" then
+    dropitem = "lpanes:pane_"..shade
+  end
 
 	for i = 1, 15 do
 		local need = {}
